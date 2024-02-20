@@ -7,7 +7,10 @@ class UserController {
         const{mail,password} = req.body;
 
         const document = new User({mail,password});
-        res.json(document);
+
+        const r = await document.save();
+
+        res.json(r);
 
     }
 }

@@ -5,4 +5,6 @@ const routes = Router ();
 
 routes .use("/usuario",user);
 
+
+
 export default routes;

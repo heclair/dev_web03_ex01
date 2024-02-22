@@ -9,6 +9,7 @@ const UserSchema = new Schema({
     required: [true, "O e-mail é obrigatório"],
     validate: {
     validator: function (value: string) {
+
     // expressão regular para validar o formato do e-mail
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return regex.test(value);
@@ -48,6 +49,7 @@ const UserSchema = new Schema({
         required: [true, "O valor é obrigatório"],
         },
         });
+        
         // mongoose.model compila o modelo
         const User = mongoose.model("User", UserSchema);
         const Spent = mongoose.model("Spent", SpentSchema);

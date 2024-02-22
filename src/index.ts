@@ -11,6 +11,7 @@ app.use(express.json());
 
 conectar();
 
-app.listen(PORT, () => console.log(`Rodando na port ${PORT}...`));
+app.listen(PORT, () => 
+    console.log(`Rodando na port ${PORT}...`));
 
 app.use(routes);
